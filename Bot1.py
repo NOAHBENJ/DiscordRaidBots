@@ -22,13 +22,14 @@ async def msg(ctx, *, usrCode: None):
 
 @client.command()
 async def DM(ctx, user: discord.User, *, message=None):
-  if ctx.author.id == 543973148618391564:
+  if ctx.author.id == YOUR ID:
     for i in range(25):
 
         message = message or "This Message is sent via DM"
         await user.send(message)
+        print("DM Sent For " + str(ctx.author.id) + " - This is number " + str(i + 1))
   else:
     await user.send("You are not authorized to use this command - FUCK OFF")
 
 #Bot One
-client.run("PUT TOKEN HERE")
+client.run("YOUR ID")
