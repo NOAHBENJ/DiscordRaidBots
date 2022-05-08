@@ -31,4 +31,4 @@ async def DM(ctx, user: discord.User, *, message=None):
     await user.send("You are not authorized to use this command - FUCK OFF")
 
 #Bot One
-client.run("OTcyNzgyODMzNTgyMTA0NTg2.YneEnA.5F-hnqX_xvq4wE22tH4qxV8HIaI")
+client.run("PUT TOKEN HERE")
