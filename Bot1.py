@@ -4,6 +4,11 @@ from discord.utils import get
 from discord_slash import SlashCommand, SlashContext
 import os
 
+# Your user ID - Right click your username in discord, and press (at the bottom) Copy ID (You need to have dev mode active on discord, google it)
+id = 1
+# Your bot's token (if you want to use multiple, copy this file, and run in a different window)
+token = ""
+
 intents = discord.Intents.default()
 intents.members = True
 
@@ -22,14 +27,14 @@ async def msg(ctx, *, usrCode: None):
 
 @client.command()
 async def DM(ctx, user: discord.User, *, message=None):
-  if ctx.author.id == YOUR ID:
+  if ctx.author.id == id:
     for i in range(25):
 
-        message = message or "This Message is sent via DM"
+        message = message or "This Message is sent via DM. You are: <@" + user.id + ">! <3"
         await user.send(message)
         print("DM Sent For " + str(ctx.author.id) + " - This is number " + str(i + 1))
   else:
     await user.send("You are not authorized to use this command - FUCK OFF")
 
 #Bot One
-client.run("YOUR ID")
+client.run(token)
